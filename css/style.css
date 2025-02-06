@@ -122,6 +122,7 @@ span {
 
 .home-content p {
     font-size: 1.6rem;
+    margin-right: 150px;
 }
 
 .social-media a {
@@ -180,6 +181,10 @@ span {
 .heading {
     text-align: center;
     font-size: 4.5rem;
+}
+
+.about-content {
+    margin-left: 150px;
 }
 
 .about-content h2 {
@@ -255,16 +260,6 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-}
-
-.portfolio-box::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-container {
