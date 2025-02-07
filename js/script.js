@@ -57,3 +57,26 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Evita la redirección
+    
+    const formData = new FormData(this);
+
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+        // Muestra el popup de éxito
+        const popup = document.getElementById("successPopup");
+        popup.style.display = "block";
+        setTimeout(() => {
+            popup.style.display = "none"; // Oculta el popup después de 3 segundos
+        }, 3000);
+
+        this.reset(); // Resetea el formulario después de enviarlo
+    }
+});

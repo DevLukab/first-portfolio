@@ -374,6 +374,19 @@ span {
     cursor: pointer;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
