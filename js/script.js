@@ -58,9 +58,25 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
+/*========================= get mail message =========================*/
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    let messageValue = document.getElementById("message").value.trim();
+
+    if (messageValue === "") {
+        alert("Please enter a message before submitting.");
+        event.preventDefault();
+        return;
+    }
+
+    document.getElementById("message_hidden").value = messageValue;
+});
+
+/*========================= show popup when mail submited =========================*/
+
 document.getElementById("contactForm").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Evita la redirección
-    
+    event.preventDefault();
+
     const formData = new FormData(this);
 
     const response = await fetch(this.action, {
@@ -70,13 +86,12 @@ document.getElementById("contactForm").addEventListener("submit", async function
     });
 
     if (response.ok) {
-        // Muestra el popup de éxito
         const popup = document.getElementById("successPopup");
         popup.style.display = "block";
         setTimeout(() => {
-            popup.style.display = "none"; // Oculta el popup después de 3 segundos
+            popup.style.display = "none";
         }, 3000);
 
-        this.reset(); // Resetea el formulario después de enviarlo
+        this.reset(); 
     }
 });

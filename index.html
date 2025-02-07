@@ -158,33 +158,6 @@
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
-
-            <div class="portfolio-box">
-                <img src="images/portfolio4.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, libero.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/portfolio5.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, libero.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/portfolio6.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, libero.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -192,7 +165,7 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="https://formsubmit.co/0a8d541ff37ada552723bf245ce181df" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/ajax/0a8d541ff37ada552723bf245ce181df" method="POST">
             <!-- Honeypot -->
             <input type="text" name="_honey" style="display: none;">
 
@@ -207,14 +180,14 @@
                 <input type="email" placeholder="Email Address" name="Email&nbsp;Address" required>
                 <input type="text" placeholder="Email Subject" name="Email&nbsp;Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" name="Your&nbsp;Message"
-                required></textarea>
+            <input type="hidden" name="message_hidden" id="message_hidden">
+            <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
 
         <!-- Popup de éxito -->
         <div id="successPopup" class="popup">
-            <p>✅ Formulario enviado con éxito.</p>
+            <p>✅ Form sent successfully.</p>
         </div>
     </section>
 
