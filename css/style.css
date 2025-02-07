@@ -257,18 +257,17 @@ span {
 }
 
 .portfolio-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    align-items: stretch;
     gap: 2.5rem;
+    height: 65vh; 
 }
 
 .portfolio-container .portfolio-box {
@@ -281,7 +280,8 @@ span {
 
 .portfolio-box img {
     width: 100%;
-    transition: .5s ease;
+    height: 100%;
+    object-fit: cover;
 }
 
 .portfolio-box:hover img {
