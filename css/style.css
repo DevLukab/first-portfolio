@@ -209,10 +209,11 @@ span {
 
 .services-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
     gap: 2rem;
+    
 }
 
 .services-container .services-box {
