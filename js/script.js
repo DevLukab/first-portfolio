@@ -58,17 +58,10 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-/*========================= get mail message =========================*/
+/*========================= get email message =========================*/
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     let messageValue = document.getElementById("message").value.trim();
-
-    if (messageValue === "") {
-        alert("Please enter a message before submitting.");
-        event.preventDefault();
-        return;
-    }
-
     document.getElementById("message_hidden").value = messageValue;
 });
 
@@ -87,11 +80,21 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     if (response.ok) {
         const popup = document.getElementById("successPopup");
-        popup.style.display = "block";
+
+        popup.style.opacity = "1";
+        popup.style.visibility = "visible";
+
         setTimeout(() => {
-            popup.style.display = "none";
+            popup.style.opacity = "0";
+            popup.style.visibility = "hidden";
         }, 3000);
 
-        this.reset(); 
+        this.reset();
     }
+});
+
+document.getElementById("closePopup").addEventListener("click", function() {
+    const popup = document.getElementById("successPopup");
+    popup.style.opacity = "0";
+    popup.style.visibility = "hidden";
 });
