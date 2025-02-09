@@ -82,8 +82,10 @@ section {
 }
 
 .home-img img {
-    width: 600px;
-    height: 600px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
     animation: floatImage 4s ease-in-out infinite;
@@ -94,9 +96,11 @@ section {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-2.4rem);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -173,8 +177,8 @@ span {
 }
 
 .about-img img {
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 1rem var(--main-color);
@@ -213,7 +217,7 @@ span {
     justify-content: center;
     align-items: top;
     gap: 2rem;
-    
+
 }
 
 .services-container .services-box {
@@ -268,7 +272,7 @@ span {
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
     gap: 2.5rem;
-    height: 65vh; 
+    height: 65vh;
 }
 
 .portfolio-container .portfolio-box {
@@ -494,7 +498,11 @@ span {
     }
 
     .home {
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .home-content {
+        text-align: center;
     }
 
     .home-content h3 {
@@ -505,17 +513,31 @@ span {
         font-size: 5rem;
     }
 
+    .home-content p {
+        margin-right: 0;
+    }
+
     .home-img img {
         width: 70vw;
-        margin-top: 4rem;
+        height: 70vw;
     }
 
     .about {
         flex-direction: column-reverse;
     }
 
-    .about img {
+    .about-content {
+        text-align: center;
+        margin: 0;
+    }
+
+    .about-content h2 {
+        text-align: center;
+    }
+
+    .about-img img {
         width: 70vw;
+        height: 70vw;
         margin-top: 4rem;
     }
 
@@ -551,12 +573,12 @@ span {
 @media (max-width: 365px) {
     .home-img img {
         width: 90vw;
+        height: 90vw;
     }
 
     .about-img img {
         width: 90vw;
-        height: 90vw; 
-        margin-top: 4rem;
+        height: 90vw;
     }
 
     .footer {
