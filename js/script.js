@@ -80,13 +80,10 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     if (response.ok) {
         const popup = document.getElementById("successPopup");
-
-        popup.style.opacity = "1";
-        popup.style.visibility = "visible";
+        popup.classList.add("visible");
 
         setTimeout(() => {
-            popup.style.opacity = "0";
-            popup.style.visibility = "hidden";
+            popup.classList.remove("visible");
         }, 3000);
 
         this.reset();
@@ -95,6 +92,5 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 document.getElementById("closePopup").addEventListener("click", function() {
     const popup = document.getElementById("successPopup");
-    popup.style.opacity = "0";
-    popup.style.visibility = "hidden";
+    popup.classList.remove("visible");
 });
