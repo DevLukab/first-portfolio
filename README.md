@@ -16,7 +16,7 @@ This is my personal portfolio, developed from scratch using **HTML, CSS, and Jav
 ## Installation and Usage
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-username/your-repository.git
+   git clone [https://github.com/your-username/your-repository.git](https://github.com/DevLukab/portfolio.git)
    ```
 2. Open the `index.html` file in your browser and execute it.
 
