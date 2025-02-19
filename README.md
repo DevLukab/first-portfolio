@@ -20,6 +20,10 @@ This is my personal portfolio, developed from scratch using **HTML, CSS, and Jav
    ```
 2. Open the `index.html` file in your browser and execute it.
 
+## Live Demo 🌐
+You can view the live website at the following link:
+[Live Demo]((https://devlukab.github.io/first-portfolio/))
+
 ## Screenshots
 ![alt text](image.png)
 
