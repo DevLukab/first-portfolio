@@ -22,7 +22,7 @@ This is my personal portfolio, developed from scratch using **HTML, CSS, and Jav
 
 ## Live Demo 🌐
 You can view the live website at the following link:
-[Live Demo]((https://devlukab.github.io/first-portfolio/))
+[Live Demo](https://devlukab.github.io/first-portfolio/)
 
 ## Screenshots
 ![alt text](image.png)
